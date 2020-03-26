@@ -18,7 +18,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Container */
 .container {
-	width: 100;
+	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -38,9 +38,10 @@ h1,h2,h3,h4,h5,h6 {
     background-size:cover;                  
 }
 
-.introTitle:after{
+.introTitle::after{
 	content: "";
 	display: block;
+	text-align: center;
 	width: 60px;
 	height:3px;
 	background-color: #fff;
@@ -49,21 +50,17 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .introTitle {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	font-family: 'Montserrat';
 	font-weight: 700;
-	font-size: 6.25em;
+	font-size: 7em;
 	color: #fff;
 	text-transform: uppercase;
 	text-align: center;
+	line-height: 100px;
 }
 
 .introSupitle {
     font-family: 'Kaushan Script', cursive;
-    margin-bottom: 300px;
     color: #fff;
 	font-size: 72px;
 	text-align: center;
@@ -115,7 +112,7 @@ h1,h2,h3,h4,h5,h6 {
 	transition: color .2s linear; /* было пропущено 's', ты указывай что секунд а не просто цифру */
 }
 
-.nav__link:after {
+.nav__link::after {
 	content: "";
 
 	display: block;
@@ -136,21 +133,28 @@ h1,h2,h3,h4,h5,h6 {
 	color: #fae187;
 }
 
-.nav__link:hover:after{
+.nav__link:hover::after{
+	display: block;
+	vertical-align: top;
+}
+
+/*Button*/
+
+.btn {
+	color: #fff;
 	display: inline-block;
 	vertical-align: top;
 	padding: 8px 30px;
+	font-size:14px;
+	font-weight:700;
+	border:3px solid #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: .2s linear;
+	font-family: Montserrat;
+}
 
-	border: 3px solid #fff;
-	font-size: 14px;
-	
-
-/*Button*/
-display: inline-block;
-vertical-align: top;
-padding: 8px 30px;
-font-size:14px;
-font-weight:700;
-border:3px solid #fff;
-text-transform: uppercase;
-text-decoration: none;
+.btn:hover {
+	color: #222222;
+	background-color: #fff;
+}
