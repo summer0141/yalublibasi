@@ -26,20 +26,26 @@ h1,h2,h3,h4,h5,h6 {
 /* Intro */
 
 .intro {
+	position: relative;
 	width: 100%;
 	height: 100vh;
 
 	background: url("../images/intro.jpg") center no-repeat;
     -webkit-background-size: cover;
-    background-size:cover 	                  
+    background-size:cover;                  
 }
 
 
 
 .introTitle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	font-family: 'Montserrat';
 	font-weight: 700;
-	font-size: 150px;
+	font-size: 6.25em;
+	color: #fff;
 	text-transform: uppercase;
 	text-align: center;
 }
